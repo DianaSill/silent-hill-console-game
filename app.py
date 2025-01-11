@@ -21,6 +21,8 @@ def check_health():
         slow_print("\nYou're feeling weak, but you can still continue.")
     elif health == 1:
         slow_print("\nYou're in pain, but you're still hanging on.")
+    
+    slow_print(f"\nYour current health is: {health}/3")
 
 visited_choices = []  # Track visited choices
 
@@ -60,8 +62,8 @@ def intro():
     elif choice == '2':
         slow_print("\nYou decide to stay by the car. Hours pass, and then the sun sets. The fog deepens, and strange sounds fill the air. Eventually, you lose consciousness.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         intro()
 
 def town_square(visited_choices):
@@ -163,15 +165,15 @@ def classroom_encounter(visited_choices):
     if choice == '1':
         slow_print("\nYou walk over to the desk, your heart racing. As you look inside, a cold hand suddenly grabs your wrist. You pull away in shock, but there's no one there.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         classroom_encounter(visited_choices)
     elif choice == '2':
         slow_print("\nYou approach the chalkboard and begin to examine the strange symbols. As you touch them, the symbols seem to shift and twist, forming disturbing images.")
         slow_print("The air grows colder, and you feel an unnatural force pushing against you. The whispers grow louder.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         classroom_encounter(visited_choices)
     elif choice == '3':
         slow_print("\nYou quickly decide to leave the classroom. The door slams shut behind you, and the whispers fade into the distance.")
@@ -208,8 +210,8 @@ def hospital(visited_choices):
         slow_print("Inside, you find a bloody surgical table, and the crying stops abruptly. A woman appears in the doorway, her face disfigured and her hands outstretched.")
         slow_print("She whispers, 'It’s your turn now.'")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         hospital(visited_choices)
 
 def elevator_ride(visited_choices):
@@ -231,8 +233,8 @@ def elevator_ride(visited_choices):
         slow_print("\nYou walk toward the mannequins. As you get closer, one of them blinks. You freeze in place, but it’s too late.")
         slow_print("The mannequins spring to life, their limbs jerking unnaturally toward you. You barely manage to dodge their grasp.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         elevator_ride(visited_choices)
     elif choice == '2':
         slow_print("\nYou decide to leave the room. As you step back into the elevator, it begins its ascent on its own, returning to the ground floor.")
@@ -264,8 +266,8 @@ def hospital_journal(visited_choices):
         slow_print("\nYou read the notes carefully, deciphering the garbled writing. It describes the twisted experiments that took place here, some of which are beyond comprehension.")
         slow_print("As you reach the end of the journal, you feel a sharp pain in your chest. You look down to see your own blood dripping onto the page.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         hospital_journal(visited_choices)
     elif choice == '2':
         slow_print("\nYou quickly close the journal, a sense of dread rising in your chest. You leave the room, but the oppressive atmosphere clings to you.")
@@ -275,8 +277,8 @@ def hospital_journal(visited_choices):
         slow_print("\nYou glance around the room, your eyes darting nervously. The walls are covered in old medical charts, and there are strange devices that you don't recognize.")
         slow_print("One of the devices suddenly sparks to life, and you feel a jolt of electricity surge through your body.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         hospital_journal(visited_choices)
 
 def second_floor(visited_choices):
@@ -296,15 +298,15 @@ def second_floor(visited_choices):
         slow_print("\nYou open the door slowly, revealing a small, dark room. Inside, you find an old wooden box with strange markings.")
         slow_print("Before you can open it, a cold hand grabs your shoulder. You spin around, but no one is there.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         second_floor(visited_choices)
     elif choice == '2':
         slow_print("\nYou cautiously investigate the hallway, but the atmosphere grows heavier with every step. Suddenly, the lights flicker and go out.")
         slow_print("You hear a whisper in the dark, 'You shouldn’t be here.' Something cold brushes against your neck.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         second_floor(visited_choices)
     elif choice == '3':
         slow_print("\nYou decide to retreat downstairs. As you leave, you hear a faint laugh from behind you, but when you turn around, the hallway is empty.")
@@ -330,8 +332,8 @@ def ground_floor(visited_choices):
         slow_print("\nYou open the body bag, revealing a grotesque sight. The body inside is decomposed, but its eyes are wide open, staring at you.")
         slow_print("Suddenly, the body jerks, and a hand shoots out from the bag, grabbing you by the wrist.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         ground_floor(visited_choices)
     elif choice == '2':
         slow_print("\nYou search the room but find nothing of value. The air grows colder, and you feel an overwhelming sense of dread.")
@@ -361,22 +363,22 @@ def basement_encounter(visited_choices):
         slow_print("\nYou open the door, revealing a room filled with strange machinery. In the center of the room, there is a large metal chair with chains attached.")
         slow_print("A voice whispers, 'Sit down, it’s the only way.' You feel drawn to the chair, unable to resist.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         town_square(visited_choices)
     elif choice == '2':
         slow_print("\nYou search frantically for another exit, but the walls seem to shift around you. The light flickers again, revealing shadows of creatures.")
         slow_print("You run, but you can't find your way out. The walls close in, and you are consumed by the darkness.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         town_square(visited_choices)
     elif choice == '3':
         slow_print("\nYou turn to confront the entity following you, but as you do, it reveals itself—a horrifying figure, its face a twisted mass of faces, all contorted in agony.")
         slow_print("Before you can react, it lunges at you.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         town_square(visited_choices)
     else:
         slow_print("\nInvalid choice. Try again.\n")
@@ -400,22 +402,22 @@ def fountain_encounter(visited_choices):
         slow_print("\nYou turn and run, but the fog grows thicker, and the ground becomes slick. You stumble, and one of the figures catches up with you.")
         slow_print("You scream as it pulls you into the water.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         town_square(visited_choices)
     elif choice == '2':
         slow_print("\nYou stand firm, but as they get closer, their forms begin to distort, becoming monstrous. The sound of their screams fills your ears.")
         slow_print("In the end, you are consumed by them, lost in the darkness.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         town_square(visited_choices)
     elif choice == '3':
         slow_print("\nYou try to communicate, but the figures remain silent, their empty eyes fixed on you.")
         slow_print("As you speak, the water splashes violently, and the figures close in, dragging you into the fountain.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         town_square(visited_choices)
     else:
         slow_print("\nInvalid choice. Try again.\n")
@@ -439,22 +441,22 @@ def antique_shop(visited_choices):
         slow_print("\nYou approach the painting, and as you touch it, the figure's eyes snap open. It begins to speak, 'You shouldn’t have come here.'")
         slow_print("The painting begins to bleed, and you are pulled into it, trapped inside the frame.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         town_square(visited_choices)
     elif choice == '2':
         slow_print("\nYou reach out to touch one of the mirrors. As you do, your reflection begins to distort, becoming something monstrous.")
         slow_print("The reflection smiles back at you, but it's not your smile.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         town_square(visited_choices)
     elif choice == '3':
         slow_print("\nYou decide to leave the shop, but as you step outside, the door slams shut, and the shop vanishes into thin air.")
         slow_print("You're left standing in the fog, feeling even more alone.")
         health -= 1
-        check_health()
         slow_print("You take 1 point of damage!")
+        check_health()
         town_square(visited_choices)
     else:
         slow_print("\nInvalid choice. Try again.\n")

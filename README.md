@@ -6,7 +6,7 @@ The **Silent Hill Text Adventure** is an immersive text-based horror game inspir
 ---
 
 ## Snapshot
-![Silent Hill Text Adventure Screenshot](?????????todo)
+![Silent Hill Text Adventure Screenshot](gitimageReadme.png)
 
 ---
 
@@ -32,12 +32,12 @@ The **Silent Hill Text Adventure** is an immersive text-based horror game inspir
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/ ?????????????????
+   git clone https://github.com/DianaSill/silent-hill-console-game
 
 2. **Navigate to the Project Folder:**:
     After cloning, navigate to the project directory:
     ```bash
-    cd silent-hill-text-adventure
+    cd silent-hill-console-game
 
 3. **Run the game**:
     Run the game by executing the Python script:
